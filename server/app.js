@@ -29,13 +29,13 @@ sequelize.authenticate().then(() => {
     console.error('Unable to connect to the database: ', error);
  });
 
+app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 app.use(session({
     secret: "12AB34",
     resave: false,
     saveUninitialized: false,
 }))
-
 
 
 app.use('',auth);

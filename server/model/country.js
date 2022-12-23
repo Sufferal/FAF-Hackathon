@@ -21,7 +21,7 @@ const country = sequelize.define("country", {
 
 
 const createTable = sequelize.sync().then(() => {
-  console.log('Table country were created successfully!');
+  console.log('Table country created successfully!');
 }).catch((error) => {
   console.error('Unable to create the tables : ', error);
 }); 
