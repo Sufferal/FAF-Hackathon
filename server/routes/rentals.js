@@ -6,14 +6,14 @@ const {
     postRental,
     putRental,
     deleteRental,
-} = require('../controller/user')
+} = require('../controller/rentals')
 
 
-router.get('/api/user', getUser);
-router.get('/api/user/:id', getUserID)
-router.post('/api/user', postUser);
-router.put('/api/user/:id', putUser);
-router.delete('/api/user/:id', deleteUser);
+router.get('/api/rentals', getRental);
+router.get('/api/rentals/:id', getRentalID)
+router.post('/api/rentals', postRental);
+router.put('/api/rentals/:id', putRental);
+router.delete('/api/rentals/:id', deleteRental);
 
 
 module.exports = router

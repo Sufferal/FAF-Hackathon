@@ -20,7 +20,7 @@ const getRentalID = ('/rentals/:id', async(req, res)=>{
 })
 
 const postRental = ('/rentals', async(req, res)=>{
-    const {name, password} = req.body;
+    const {name, description, foreignKey} = req.body;
     if (!name) {
         return res.status(400).send("The name is missing");
     } else {
@@ -49,4 +49,4 @@ const deleteRental = ('/rentals/:id', async(req, res)=>{
     return res.status(200).json({msg: 'Rental was deleted successfully'});
 })
 
-module.exports = {getRentals, getRentalID, postRental, putRental, deleteRental}
+module.exports = {getRental, getRentalID, postRental, putRental, deleteRental}

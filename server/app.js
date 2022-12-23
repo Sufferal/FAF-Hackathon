@@ -2,16 +2,12 @@ const express = require('express')
 const app = express();
 const port = 5000;
 const mysql = require('mysql');
-const sequelizeRouter = require('sequelize-router');
 const session = require('express-session');
 const sequelize = require('./model/sequelize').sequelize
-<<<<<<< Updated upstream
-const {country} = require('./model/country')
 const auth = require('./routes/auth')
 const user = require('./routes/user')
-=======
-const {country, rentals} = require('./model/tables')
->>>>>>> Stashed changes
+const rental = require('./routes/rentals')
+const country = require('./routes/country')
 
 
 const con = mysql.createConnection({
@@ -41,8 +37,11 @@ app.use(session({
 }))
 
 
+
 app.use('',auth);
 app.use('',user);
+app.use('',rental);
+app.use('',country);
 
 app.listen(port, () => {
     console.log(`Application is running on port ${port}.`);
