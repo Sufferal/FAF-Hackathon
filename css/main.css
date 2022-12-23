@@ -1,5 +1,14 @@
 @import "normalize.css";
 
+/* Variables */
+:root {
+  --primary-font: "Raleway", sans-serif;
+  --primary-color: #fff;
+}
+
 body {
-  background: red;
+  background: rgb(42, 218, 165);
+  color: #fff;
+
+  font-family: var(--primary-font);
 }
