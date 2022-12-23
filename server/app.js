@@ -3,7 +3,7 @@ const app = express();
 const port = 5000;
 const mysql = require('mysql')
 const sequelize = require('./model/sequelize').sequelize
-const tables = require('./model/tables')
+const {country} = require('./model/tables')
 
 
 const con = mysql.createConnection({
@@ -26,7 +26,7 @@ sequelize.authenticate().then(() => {
  });
 
 
-app.use(tables);
+app.use('/api/country');
 
 
 app.listen(port, () => {
