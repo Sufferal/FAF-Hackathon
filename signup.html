@@ -15,6 +15,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/pages/signup.css" />
 
     <!-- Favicons -->
     <link
@@ -48,7 +49,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
 
-    <title>Travely | Map</title>
+    <title>Travely | Sign-up</title>
   </head>
   <body>
     <!-- Header -->
@@ -81,17 +82,43 @@
             </li>
           </ul>
         </nav>
-
-        <!-- Background -->
-        <section class="header-">
-          <!-- <h2>We believe in <span class="text-highlight">logan</span></h2>
-          <h3>Here at</h3> -->
-        </section>
       </div>
     </header>
 
-    <!-- Map -->
-    <section></section>
+    <!-- login -->
+    <section class="section section-primary">
+      <div class="container">
+        <h2 class="section-title section-title-secondary">Sign-up</h2>
+
+        <div class="login-container">
+          <form class="login-form">
+            <div class="login-input">
+              <label class="login-input-name" for="name">Name: </label><br />
+              <input type="text" id="login-name" name="login-name" /><br />
+            </div>
+
+            <div class="login-input">
+              <label class="login-input-password" for="password">
+                Password: </label
+              ><br />
+              <input
+                type="password"
+                id="login-password"
+                name="login-password"
+              />
+            </div>
+
+            <p class="login-register-text">
+              Already a member?
+              <a class="login-register-link" href="login.html">Log-in </a
+              >right now!
+            </p>
+
+            <input class="login-submit" type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="footer" class="footer">
