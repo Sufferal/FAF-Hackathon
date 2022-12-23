@@ -3,9 +3,10 @@ const app = express();
 const port = 5000;
 const mysql = require('mysql');
 const sequelizeRouter = require('sequelize-router');
-const sessions = require('sessions')
+const session = require('express-session');
 const sequelize = require('./model/sequelize').sequelize
 const {country} = require('./model/country')
+const auth = require('./routes/auth')
 
 
 const con = mysql.createConnection({

@@ -12,8 +12,8 @@ const country = sequelize.define("country", {
     required: true,
     allowNull: false
   },
-  status_id: {
-    type: Sequelize.STRING,
+  status: {
+    type: Sequelize.BOOLEAN,
     required: true,
     allowNull: false
   },

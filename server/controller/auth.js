@@ -1,10 +1,11 @@
-const { user } = require('../models/user');
+const { user } = require('../model/user');
 const {hashPassword, comparePassword} = require('../utils/helpers')
 
 
 const register = ('/register', async(req, res)=>{
     const {name, password} = req.body;
     const hashedPassword = await hashPassword(password);
+    console.log(hashedPassword)
     const userDB = await user.findOne({ where: [{name: name}]});
     if (userDB){
         res.status(400).json({msg:'User already exists!'})
@@ -25,6 +26,7 @@ const login = ('/login', async(req, res)=>{
         return res.status(401).send("No such user exists");
     }
     const isValid = await comparePassword(password, userDB.password);
+    console.log(userDB.password)
     if (isValid === true){
         req.session.user = userDB;
         return res.status(200).json({msg: "Successful login"})
