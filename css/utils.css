@@ -24,6 +24,10 @@
   color: var(--highlight-color);
 }
 
+.text-background {
+  color: var(--background-color);
+}
+
 .tab {
   padding-right: 5rem;
 }

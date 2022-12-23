@@ -1,3 +1,56 @@
+.card-container {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  padding: 3rem;
+  border: 3px solid var(--background-color);
+  border-radius: 5px;
+  margin-right: 5rem;
+
+  transition: .1s all ease-in;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card .card-img {
+  width: 400px;
+  height: 400px;
+
+  transition: .1s all ease-in;
+}
+
+.card:hover .card-img {
+  border-radius: 50%;
+}
+
+.card:hover {
+  color: var(--primary-color);
+  background: var(--background-color);
+}
+
+.card:hover .card-title a {
+  color: var(--primary-color);
+}
+
+.card .card-title a {
+  color: var(--background-color);
+}
+
+.card .card-desc {
+  font-size: 2rem;
+}
+
+/* ============================================= REVIEW =============================================*/
+.section.section-review {
+  background: rgb(42,218,165);
+  background: linear-gradient(90deg, rgba(42,218,165,1) 0%, rgba(251,111,228,1) 35%, rgba(0,212,255,1) 100%);
+}
+
 .review-user {
   margin: 5rem 0;
 
