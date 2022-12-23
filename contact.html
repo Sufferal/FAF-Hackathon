@@ -15,6 +15,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/pages/contact.css" />
 
     <!-- Favicons -->
     <link
@@ -71,10 +72,10 @@
               <a href="map.html" class="nav-list-link">Map</a>
             </li>
             <li class="nav-list-item">
-              <a href="about.html" class="nav-list-link">About</a>
+              <a href="contact.html" class="nav-list-link">Contact</a>
             </li>
             <li class="nav-list-item">
-              <a href="contact.html" class="nav-list-link">Contact</a>
+              <a href="about.html" class="nav-list-link">About</a>
             </li>
           </ul>
         </nav>
@@ -87,13 +88,37 @@
       </div>
     </header>
 
-    <!-- Map -->
-    <section></section>
+    <!-- Contact -->
+    <section class="section section-primary section-contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+
+        <form class="user-form" action="/">
+          <div class="user-info">
+            <div class="user-input">
+              <label class="user-input-name" for="name">Name: </label><br />
+              <input type="text" id="name" name="name" /><br />
+            </div>
+            <div class="user-input">
+              <label class="user-input-email" for="email">Email: </label><br />
+              <input type="email" id="email" name="email" /><br /><br />
+            </div>
+          </div>
+
+          <div class="user-area">
+            <label class="user-area-textarea" for="message">Message: </label><br />
+            <textarea name="message" id="user-message"></textarea>
+          </div>
+
+          <input class="user-submit" type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="footer" class="footer">
       <div class="container">
-        <hr class="footer-line" />
+        <hr class="footer-line footer-line-primary" />
         <p class="footer-text">
           Copyright <span class="text-highlight">&copy;</span> 2022
         </p>

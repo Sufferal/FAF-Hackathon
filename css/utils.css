@@ -33,7 +33,13 @@
 }
 
 .section.section-primary {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.section.section-secondary {
   background: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .section-title {
@@ -53,4 +59,3 @@
   margin: 0 auto;
   margin-top: 2rem;
 }
-
