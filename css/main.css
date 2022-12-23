@@ -6,7 +6,11 @@
 :root {
   --primary-font: "Raleway", sans-serif;
   --font-size: 16px;
+
   --primary-color: #fff;
+  --secondary-color: #fb6f90;
+
+  --highlight-color: #fb6f90;
 }
 
 html {
@@ -42,17 +46,16 @@ body {
 }
 
 .nav-list-link {
-  transition: .1s all ease-in;
+  transition: 0.1s all ease-in;
 }
 
 .nav-list-link:hover {
-  color: red;
+  color: var(--highlight-color);
 }
 
 .nav-list-item:last-child {
   margin-right: 0;
 }
-
 
 /* ================================================= LOGO ========================================= */
 .logo {
@@ -69,4 +72,44 @@ body {
 
 .logo-title {
   font-size: 4rem;
+}
+
+/* ================================================= REVIEW ======================================== */
+.review-user {
+  margin: 5rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-user .user-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.review-user .user-name {
+  font-size: 2.5rem;
+}
+
+.review-user .user-review {
+  font-size: 2rem;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* ================================================= FOOTER ======================================== */
+.footer {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer-line {
+  border: 2px solid var(--highlight-color);
+}
+
+.footer-text {
+  font-size: 3rem;
+  font-weight: bold;
 }
