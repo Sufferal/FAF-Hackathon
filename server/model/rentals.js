@@ -1,6 +1,5 @@
 const Sequelize = require("sequelize");
 const sequelize = require('./sequelize').sequelize
-const country = require('./country').sequelize
 
 const rentals = sequelize.define("rentals", {
   rentals_id: {
@@ -19,18 +18,6 @@ const rentals = sequelize.define("rentals", {
     allowNull: true
   },
 });
-
-rentals.hasOne(country)
-rentals.belongsTo(country, {
-  foreignKey: {
-      name: "country_id"
-  }
-})
-
-rentals.hasOne(country)
-rentals.dependsOn(country, {
-  foreignKey: "country_id"
-})
 
 const createTable = sequelize.sync().then(() => {
   console.log('Table rentals created successfully!');

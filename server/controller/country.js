@@ -1,6 +1,6 @@
 const { country } = require('../model/country'); 
 
-const getCountry = ('/user', async(req, res)=>{
+const getCountry = ('/country', async(req, res)=>{
     const countryDB = await country.findAll({attributes: ['name']});
     if(countryDB){
         res.status(200).json(countryDB);
@@ -20,11 +20,11 @@ const getCountryID = ('/country/:id', async(req, res)=>{
 })
 
 const postCountry = ('/country', async(req, res)=>{
-    const {name} = req.body;
+    const {name, status} = req.body;
     if (!name) {
         return res.status(400).send("The name is missing");
     } else {    
-    const newCountry = await country.create({name: name});
+    const newCountry = await country.create({name: name, status: status});
     const saveCountry = newCountry.save();
     res.status(200).json({msg:'Country was added with success'})
     }

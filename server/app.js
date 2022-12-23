@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-const port = 5000;
+const port = 3000;
 const mysql = require('mysql');
 const session = require('express-session');
 const sequelize = require('./model/sequelize').sequelize
@@ -40,8 +40,8 @@ app.use(session({
 
 app.use('',auth);
 app.use('',user);
-app.use('',rental);
 app.use('',country);
+app.use('',rental);
 
 app.listen(port, () => {
     console.log(`Application is running on port ${port}.`);

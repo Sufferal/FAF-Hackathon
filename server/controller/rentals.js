@@ -20,12 +20,12 @@ const getRentalID = ('/rentals/:id', async(req, res)=>{
 })
 
 const postRental = ('/rentals', async(req, res)=>{
-    const {name, description, foreignKey} = req.body;
+    const {name, description} = req.body;
     if (!name) {
         return res.status(400).send("The name is missing");
     } else {
-    const newRentals = await user.create({name: name, description: description, foreignKey: foreignKey});
-    const saveRentals = newUser.save();
+    const newRentals = await rentals.create({name: name, description: description});
+    const saveRentals = newRentals.save();
     res.status(200).json({msg:'Rental was added with success'})
     }
 })
@@ -45,7 +45,7 @@ const putRental = ('/rentals/:id', async(req, res)=>{
 
 const deleteRental = ('/rentals/:id', async(req, res)=>{
     const {id} = req.params;
-    const rentalsDB = await user.destroy({where: {rental_id: id}})
+    const rentalsDB = await rentals.destroy({where: {rental_id: id}})
     return res.status(200).json({msg: 'Rental was deleted successfully'});
 })
 
