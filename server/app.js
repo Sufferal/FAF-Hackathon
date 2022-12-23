@@ -5,9 +5,13 @@ const mysql = require('mysql');
 const sequelizeRouter = require('sequelize-router');
 const session = require('express-session');
 const sequelize = require('./model/sequelize').sequelize
+<<<<<<< Updated upstream
 const {country} = require('./model/country')
 const auth = require('./routes/auth')
 const user = require('./routes/user')
+=======
+const {country, rentals} = require('./model/tables')
+>>>>>>> Stashed changes
 
 
 const con = mysql.createConnection({
