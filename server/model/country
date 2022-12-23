@@ -1,0 +1,17 @@
+const country = sequelize.define("country", {
+  country_id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+  },
+  name: {
+    type: Sequelize.STRING,
+    required: true,
+    allowNull: false
+  },
+  status_id: {
+    type: Sequelize.STRING,
+    required: true,
+    allowNull: false
+  },
+});

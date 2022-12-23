@@ -1,0 +1,19 @@
+const rentals = sequelize.define("rentals", {
+  rentals_id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+  },
+  description: {
+    type: Sequelize.STRING,
+    required: true,
+    allowNull: false
+  },
+});
+
+rentals.hasOne(country)
+rentals.belongsTo(country, {
+  foreignKey: {
+      name: "country_id"
+  }
+})
