@@ -4,7 +4,7 @@ const port = 5000;
 const mysql = require('mysql');
 const sequelizeRouter = require('sequelize-router');
 const sequelize = require('./model/sequelize').sequelize
-const {country, rentals} = require('./model/tables')
+const {country} = require('./model/country')
 
 
 const con = mysql.createConnection({
