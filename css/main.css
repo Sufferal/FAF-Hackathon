@@ -1,9 +1,16 @@
 @import "normalize.css";
+@import "default.css";
+@import "utils.css";
 
 /* Variables */
 :root {
   --primary-font: "Raleway", sans-serif;
+  --font-size: 16px;
   --primary-color: #fff;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {
@@ -11,4 +18,55 @@ body {
   color: #fff;
 
   font-family: var(--primary-font);
+  font-size: var(--font-size);
+}
+
+/* ================================================= NAVBAR ========================================= */
+.nav {
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list-item {
+  margin-right: 5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-list-link {
+  transition: .1s all ease-in;
+}
+
+.nav-list-link:hover {
+  color: red;
+}
+
+.nav-list-item:last-child {
+  margin-right: 0;
+}
+
+
+/* ================================================= LOGO ========================================= */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 65px;
+  height: 65px;
+
+  margin-right: 1rem;
+}
+
+.logo-title {
+  font-size: 4rem;
 }
