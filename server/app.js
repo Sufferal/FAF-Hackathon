@@ -7,6 +7,7 @@ const session = require('express-session');
 const sequelize = require('./model/sequelize').sequelize
 const {country} = require('./model/country')
 const auth = require('./routes/auth')
+const user = require('./routes/user')
 
 
 const con = mysql.createConnection({
@@ -37,6 +38,7 @@ app.use(session({
 
 
 app.use('',auth);
+app.use('',user);
 
 app.listen(port, () => {
     console.log(`Application is running on port ${port}.`);

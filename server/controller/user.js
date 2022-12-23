@@ -1,7 +1,8 @@
-const { user } = require('../model/client');
+const { user } = require('../model/user');
+const {hashPassword, comparePassword} = require('../utils/helpers') 
 
 const getUser = ('/user', async(req, res)=>{
-    const userDB = await client.findAll({attributes: ['name']});
+    const userDB = await user.findAll({attributes: ['name']});
     if(userDB){
         res.status(200).json(userDB);
     } else {
@@ -11,7 +12,7 @@ const getUser = ('/user', async(req, res)=>{
 
 const getUserID = ('/user/:id', async(req, res)=>{
     const {id} = req.params;
-    const userDB = await client.findOne({where: {id: id}})
+    const userDB = await user.findOne({where: {user_id: id}})
     if(userDB){
         res.status(200).json(userDB);
     } else {
@@ -24,7 +25,8 @@ const postUser = ('/user', async(req, res)=>{
     if (!name) {
         return res.status(400).send("The name is missing");
     } else {
-    const newUser = await user.create({name: name, password: password});
+    const hashedPassword = await hashPassword(password);     
+    const newUser = await user.create({name: name, password: hashedPassword});
     const saveUser = newUser.save();
     res.status(200).json({msg:'User was added with success'})
     }
@@ -36,8 +38,9 @@ const putUser = ('/user/:id', async(req, res)=>{
     if (!name){
         return res.status(400).send("The name is missing");
     } else {
-        const userDB = await client.update({name: name, password: password},
-            {where: {id: id}
+        const hashedPassword = await hashPassword(password); 
+        const userDB = await user.update({name: name, password: hashedPassword},
+            {where: {user_id: id}
         });
         return res.status(200).json({msg: 'User update successfully'});
     }
@@ -45,7 +48,7 @@ const putUser = ('/user/:id', async(req, res)=>{
 
 const deleteUser = ('/user/:id', async(req, res)=>{
     const {id} = req.params;
-    const userDB = await client.destroy({where: {id:id}})
+    const userDB = await user.destroy({where: {user_id: id}})
     return res.status(200).json({msg: 'User was deleted successfully'});
 })
 
