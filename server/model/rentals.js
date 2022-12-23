@@ -8,10 +8,15 @@ const rentals = sequelize.define("rentals", {
       autoIncrement: true,
       primaryKey: true,
   },
-  description: {
+  name: {
     type: Sequelize.STRING,
     required: true,
     allowNull: false
+  },
+  description: {
+    type: Sequelize.STRING,
+    required: false,
+    allowNull: true
   },
 });
 
