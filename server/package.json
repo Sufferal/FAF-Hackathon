@@ -14,6 +14,7 @@
     "i": "^0.3.7",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.28.0"
+    "sequelize": "^6.28.0",
+    "sequelize-router": "^1.0.6"
   }
 }

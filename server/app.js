@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express();
 const port = 5000;
-const mysql = require('mysql')
+const mysql = require('mysql');
+const sequelizeRouter = require('sequelize-router');
 const sequelize = require('./model/sequelize').sequelize
-const {country} = require('./model/tables')
+const {country, status} = require('./model/tables')
 
 
 const con = mysql.createConnection({
@@ -26,7 +27,7 @@ sequelize.authenticate().then(() => {
  });
 
 
-app.use('/api/country');
+app.use('/api', sequelizeRouter(country));
 
 
 app.listen(port, () => {

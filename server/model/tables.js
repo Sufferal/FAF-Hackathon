@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const sequelize = require('./sequelize').sequelize
+const sequelize = require('./sq').sequelize
 
 const country = sequelize.define("country", {
     country_id: {
@@ -38,9 +38,6 @@ country.hasOne(status, {
         name: "status_id"
     }
 })
-
-
-
 
 
 const createTable = sequelize.sync().then(() => {
