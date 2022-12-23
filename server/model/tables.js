@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const sequelize = require('./sq').sequelize
+const sequelize = require('./sequelize').sequelize
 
 const country = sequelize.define("country", {
     country_id: {

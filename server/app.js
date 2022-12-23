@@ -3,6 +3,7 @@ const app = express();
 const port = 5000;
 const mysql = require('mysql')
 const sequelize = require('./model/sequelize').sequelize
+const tables = require('./model/tables')
 
 
 const con = mysql.createConnection({
@@ -23,6 +24,9 @@ sequelize.authenticate().then(() => {
  }).catch((error) => {
     console.error('Unable to connect to the database: ', error);
  });
+
+
+app.use(tables);
 
 
 app.listen(port, () => {
