@@ -1,10 +1,10 @@
 const Sequelize = require("sequelize");
 const sequelize = new Sequelize(
-    'bda_proj',
-    'grena',
-    'D123456',
+    'hackaton',
+    'root',
+    'Password123$',
      {
-       host: 'localhost',
+       host: '127.0.0.1',
        dialect: 'mysql'
      }
    );
