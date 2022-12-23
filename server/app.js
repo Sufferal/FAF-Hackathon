@@ -5,9 +5,10 @@ const mysql = require('mysql')
 
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "user",
-    password: "password",
+    host: "127.0.0.1",
+    user: "root",
+    password: "Password123$",
+    port: 3306
 });
 
 con.connect(function(err) {
@@ -19,3 +20,4 @@ con.connect(function(err) {
 app.listen(port, () => {
     console.log(`Application is running on port ${port}.`);
 });
+
