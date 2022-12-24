@@ -1,7 +1,7 @@
 const { rentals } = require('../model/rentals');
 
 const getRental = ('/rentals', async(req, res)=>{
-    const rentalsDB = await rentals.findAll({attributes: ['name']});
+    const rentalsDB = await rentals.findAll({attributes: ['name', 'description', 'address', 'price']});
     if(rentalsDB){
         res.status(200).json(rentalsDB);
     } else {
@@ -45,7 +45,7 @@ const putRental = ('/rentals/:id', async(req, res)=>{
 
 const deleteRental = ('/rentals/:id', async(req, res)=>{
     const {id} = req.params;
-    const rentalsDB = await rentals.destroy({where: {rental_id: id}})
+    const rentalsDB = await rentals.destroy({where: {rentals_id: id}})
     return res.status(200).json({msg: 'Rental was deleted successfully'});
 })
 
