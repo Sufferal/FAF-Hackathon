@@ -1,0 +1,92 @@
+/* ================================================= SEARCH ======================================== */
+.search {
+  width: 100%;
+  display: flex;
+}
+
+.search-input {
+  width: 100%;
+
+  border: 2px solid var(--secondary-color);
+  border-right: none;
+
+  padding: 1rem 2rem;
+  font-size: 3rem;
+
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.search-input:focus {
+  color: var(--secondary-color);
+}
+
+.search-btn {
+  border: 1px solid var(--secondary-color);
+  background: var(--secondary-color);
+  text-align: center;
+  color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+}
+
+/* ================================================= RENTAL ======================================== */
+.rentals-container {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rental {
+  padding: 3rem;
+  border: 3px solid var(--background-color);
+  border-radius: 5px;
+  margin-bottom: 5rem;
+
+  display: flex;
+
+  transition: .1s all ease-in;
+}
+
+.rental:last-child {
+  margin-bottom: 0;
+}
+
+.rental .rental-img {
+  width: 250px;
+  height: 250px;
+
+  margin-right: 5rem;
+
+  transition: .1s all ease-in;
+}
+
+.rental:hover .rental-img {
+  border-radius: 50%;
+}
+
+.rental .rental-desc {
+  font-size: 2rem;
+}
+
+.rental:hover {
+  color: var(--primary-color);
+  background: var(--background-color);
+}
+
+.rental:hover .rental-title a {
+  color: var(--primary-color);
+}
+
+.rental .rental-title a {
+  color: var(--background-color);
+}
+
+.rental:hover .rental-info span {
+  color: var(--primary-color);
+}
+
