@@ -17,6 +17,16 @@ const rentals = sequelize.define("rentals", {
     required: false,
     allowNull: true
   },
+  address: {
+    type: Sequelize.STRING,
+    required: false,
+    allowNull: true
+  },
+  price: {
+    type: Sequelize.FLOAT,
+    required: false,
+    allowNull: true
+  },
 });
 
 const createTable = sequelize.sync().then(() => {

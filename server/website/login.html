@@ -91,10 +91,10 @@
         <h2 class="section-title section-title-secondary">Log-in</h2>
 
         <div class="login-container">
-          <form class="login-form">
+          <form class="login-form" method="post" action="/api/login">
             <div class="login-input">
               <label class="login-input-name" for="name">Name: </label><br />
-              <input type="text" id="login-name" name="login-name" /><br />
+              <input type="text" id="login-name" name="name" /><br />
             </div>
 
             <div class="login-input">
@@ -104,7 +104,7 @@
               <input
                 type="password"
                 id="login-password"
-                name="login-password"
+                name="password"
               />
             </div>
 

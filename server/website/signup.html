@@ -91,10 +91,10 @@
         <h2 class="section-title section-title-background">Sign-up</h2>
 
         <div class="login-container">
-          <form class="login-form">
+          <form class="login-form" method="post" action="http://localhost:3000/api/register">
             <div class="login-input">
               <label class="login-input-name" for="name">Name: </label><br />
-              <input type="text" id="login-name" name="login-name" /><br />
+              <input type="text" id="login-name" name="name" /><br />
             </div>
 
             <div class="login-input">
@@ -104,7 +104,7 @@
               <input
                 type="password"
                 id="login-password"
-                name="login-password"
+                name="password"
               />
             </div>
 
@@ -114,7 +114,7 @@
               >right now!
             </p>
 
-            <input class="login-submit" type="submit" value="Sign up" />
+            <input id="login-submit" class="login-submit" type="submit" value="Sign up" />
           </form>
         </div>
       </div>
@@ -130,6 +130,6 @@
       </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <!-- <script src="./fetch/register.js"></script> -->
   </body>
 </html>
