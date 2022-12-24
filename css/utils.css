@@ -67,3 +67,7 @@
 .section-title.section-title-secondary::after  {
   background: var(--secondary-color);
 }
+
+.section-title.section-title-background::after  {
+  background: var(--background-color);
+}
