@@ -10,6 +10,8 @@ const rental = require('./routes/rentals')
 const country = require('./routes/country')
 
 
+app.use(express.static('./website'))
+
 const con = mysql.createConnection({
     host: "127.0.0.1",
     user: "root",
