@@ -1,14 +1,11 @@
-# Ideas
+# Travely
 
-## Main goal
+A dynamic website aimed at providing users with an immersive vacation-planning experience. 
 
-Make website that will offer a vacation  
-It should include a fiter for countries  
-Once the user clicks a country the web should show offers for vacation in that country
+## Goal
+Create a user-friendly platform that offers a wide range of vacation options, incorporating a robust country filter feature. Upon selecting a specific country, the website dynamically presents tailored vacation offers for that destination, making the trip planning process seamless and enjoyable.
 
-## Site pages
-
-1. Main page
-2. Country map
-3. How to use / about
-4. Hotels and traveling information
+## Stack
+* HTML
+* CSS
+* JS
